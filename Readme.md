@@ -1,7 +1,22 @@
-# Localstacker #
+Localstacker 
+===============
+
 toolchain to setup a A fully functional local AWS cloud stack, which can be used for local development 
 
-# Getting Started #
+## Table of contents ##
+
+
+1. [Getting started](#getting-started)
+    1. [Using AWS CLI / AWS CDK with localstack](#with-aws)
+    2. [Using Terraform with localstack](#with-tf)
+2. [Troubleshooting](#ts)
+
+
+<div id='getting-started'/>
+
+Getting Started 
+===============
+
 this repo provides a docker-compose file which allows you to create a fully-functional local AWS cloud stack, `localstack`.
 
 Installing the [Localstack CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli) & [tflocal CLI](https://github.com/localstack/terraform-local) is highly recommended.
@@ -59,6 +74,8 @@ which should output something along the lines of
 
 ```
 
+<div id='with-aws'/>
+
 ## Using AWS CLI / AWS CDK with localstack ##
 to develop/deploy locally using AWS CLI, include the `--endpoint` & `profile` flags with the AWS cli command, ie:
 
@@ -70,6 +87,8 @@ localstack also provides an [awslocal](https://github.com/localstack/awscli-loca
 ```bash
 awslocal s3 ls 
 ```
+
+<div id='with-tf'/>
 
 ## Using Terraform with localstack #
 
@@ -92,3 +111,11 @@ tflocal apply
 
 ### example ###
 tf-example-creates3 contains a tf config file written to use `terraform` with localstack. 
+
+
+<div id='ts'/>
+
+Troubleshooting
+===============
+
+[click here ](docs/troubleshooting/readme.md)
