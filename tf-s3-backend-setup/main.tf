@@ -1,10 +1,10 @@
-locals {
-  region  = "us-east-1"
-  profile = "localstack2"
-}
+# locals {
+#   region  = "us-east-1"
+#   profile = "localstack2"
+# }
 provider "aws" {
-  region  = local.region
-  profile = local.profile
+  # region  = local.region
+  # profile = local.profile
 
 
   # UNCOMMENT SECTION A if not using tflocal
